@@ -10,10 +10,10 @@
   "contributors": ["Björn Harrtell <bjorn@wololo.org>"],
   "repository": {
     "type": "git",
-    "url": "git://github.com/bjornharrtell/grunt-connect-proxy2.git"
+    "url": "git://github.com/bjornharrtell/grunt-connect-proxy.git"
   },
   "bugs": {
-    "url": "https://github.com/bjornharrtell/grunt-connect-proxy2/issues"
+    "url": "https://github.com/bjornharrtell/grunt-connect-proxy/issues"
   },
   "license": "MIT",
   "main": "Gruntfile.js",
