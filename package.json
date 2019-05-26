@@ -26,7 +26,7 @@
   "scripts": {
     "prettier:check": "prettier '**/*.{ts,js,json,md,scss,vue}' --list-different",
     "prettier:write": "prettier '**/*.{ts,js,json,md,scss,vue}' --write",
-    "test": "grunt test"
+    "test": "grunt eslint test"
   },
   "husky": {
     "hooks": {
@@ -67,6 +67,7 @@
     "grunt-contrib-nodeunit": "1.0.0",
     "grunt-eslint": "^21.0.0",
     "husky": "^2.3.0",
+    "is-ci": "^2.0.0",
     "lint-staged": "^8.1.7",
     "prettier": "^1.17.1"
   },

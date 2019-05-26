@@ -8,18 +8,26 @@
 
 "use strict";
 
+const isCI = require("is-ci");
+
 module.exports = function(grunt) {
     var proxySnippet = require("./lib/utils.js").proxyRequest;
 
     // Project configuration.
     grunt.initConfig({
         eslint: {
-            default: [
-                "Gruntfile.js",
-                "tasks/*.js",
-                "lib/*.js",
-                "<%= nodeunit.tests %>",
-            ],
+            default: {
+                options: {
+                    /* CI pipeline sets stricter environment to disallow any warnings */
+                    maxWarnings: isCI ? 0 : -1,
+                },
+                src: [
+                    "Gruntfile.js",
+                    "tasks/*.js",
+                    "lib/*.js",
+                    "<%= nodeunit.tests %>",
+                ],
+            },
         },
 
         // Before generating any new files, remove any previously-created files.
