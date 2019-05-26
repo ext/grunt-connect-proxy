@@ -1,0 +1,15 @@
+{
+    "env": {
+        "node": true
+    },
+
+    "extends": ["sidvind/es2017", "plugin:prettier/recommended"],
+
+    "plugins": ["prettier"],
+
+    "rules": {
+        "prettier/prettier": "warn",
+        "indent": ["error", 4],
+        "no-console": "off"
+    }
+}
