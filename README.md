@@ -1,3 +1,11 @@
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+
+[npm-image]: https://img.shields.io/npm/v/grunt-connect-proxy3.svg
+[npm-url]: https://www.npmjs.com/package/grunt-connect-proxy3
+[travis-image]: https://img.shields.io/travis/ext/grunt-connect-proxy/master.svg
+[travis-url]: https://travis-ci.org/ext/grunt-connect-proxy
+
 # grunt-connect-proxy3
 
 > Provides a http proxy as middleware for the grunt-contrib-connect plugin.
