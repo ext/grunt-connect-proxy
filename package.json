@@ -53,8 +53,7 @@
     }
   },
   "dependencies": {
-    "http-proxy": "1.15.2",
-    "lodash": "4.16.4"
+    "http-proxy": "1.15.2"
   },
   "devDependencies": {
     "@sidvind/build-scripts": "1.0.0",
