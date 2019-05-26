@@ -1,5 +1,3 @@
-"use strict";
-
 /*
   ======== A Handy Little Nodeunit Reference ========
   https://github.com/caolan/nodeunit
@@ -19,8 +17,8 @@
     test.doesNotThrow(block, [error], [message])
     test.ifError(value)
 */
-var utils = require("../lib/utils.js");
-var http = require("http");
+const utils = require("../lib/utils.js");
+const http = require("http");
 
 exports.connect_proxy = {
     setUp: function(done) {
@@ -47,7 +45,7 @@ exports.connect_proxy = {
                 port: 9000,
             },
             function(response) {
-                var data = "";
+                let data = "";
                 response.on("data", function(chunk) {
                     data += chunk;
                 });

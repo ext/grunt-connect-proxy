@@ -1,4 +1,4 @@
-var utils = require("../lib/utils.js");
+const utils = require("../lib/utils.js");
 
 exports.server3_proxy_test = {
     setUp: function(done) {
@@ -7,7 +7,7 @@ exports.server3_proxy_test = {
     },
     proxy_options_test: function(test) {
         test.expect(8);
-        var proxies = utils.proxies();
+        const proxies = utils.proxies();
 
         test.equal(proxies.length, 1, "should have just one proxy");
         test.notEqual(proxies[0].server, null, "server should be configured");

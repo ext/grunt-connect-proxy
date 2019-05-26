@@ -9,6 +9,7 @@
 
     "rules": {
         "prettier/prettier": "warn",
+        "camelcase": "off",
         "indent": ["error", 4],
         "no-console": "off"
     }

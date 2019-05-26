@@ -6,13 +6,9 @@
  * Licensed under the MIT license.
  */
 
-"use strict";
-
 const isCI = require("is-ci");
 
 module.exports = function(grunt) {
-    var proxySnippet = require("./lib/utils.js").proxyRequest;
-
     // Project configuration.
     grunt.initConfig({
         eslint: {
@@ -118,7 +114,7 @@ module.exports = function(grunt) {
             },
             request: {
                 options: {
-                    middleware: function(connect, options) {
+                    middleware: function() {
                         return [require("./lib/utils").proxyRequest];
                     },
                 },

@@ -6,9 +6,8 @@
  * Licensed under the MIT license.
  */
 
-"use strict";
-var utils = require("../lib/utils");
-var _ = require("lodash");
+const utils = require("../lib/utils");
+const _ = require("lodash");
 
 module.exports = function(grunt) {
     grunt.registerTask(
@@ -16,10 +15,10 @@ module.exports = function(grunt) {
         "Configure any specified connect proxies.",
         function(config) {
             // setup proxy
-            var httpProxy = require("http-proxy");
-            var proxyOption;
-            var proxyOptions = [];
-            var validateProxyConfig = function(proxyOption) {
+            const httpProxy = require("http-proxy");
+            let proxyOption;
+            let proxyOptions = [];
+            const validateProxyConfig = function(proxyOption) {
                 if (
                     _.isUndefined(proxyOption.host) ||
                     _.isUndefined(proxyOption.context)
@@ -31,9 +30,9 @@ module.exports = function(grunt) {
                 }
                 if (proxyOption.https && proxyOption.port === 80) {
                     grunt.log.warn(
-                        "Proxy  for " +
-                            proxyOption.context +
-                            " is using https on port 80. Are you sure this is correct?"
+                        `Proxy for ${
+                            proxyOption.context
+                        } is using https on port 80. Are you sure this is correct?`
                     );
                 }
                 return true;
@@ -42,7 +41,7 @@ module.exports = function(grunt) {
             utils.reset();
             utils.log = grunt.log;
             if (config) {
-                var connectOptions = grunt.config("connect." + config) || [];
+                const connectOptions = grunt.config(`connect.${config}`) || [];
                 if (
                     typeof connectOptions.appendProxies === "undefined" ||
                     connectOptions.appendProxies
@@ -66,7 +65,7 @@ module.exports = function(grunt) {
                     secure: true,
                     xforward: false,
                     rules: [],
-                    errorHandler: function(req, res, next) {},
+                    errorHandler: function() {},
                     ws: false,
                 });
                 if (validateProxyConfig(proxyOption)) {
@@ -84,18 +83,15 @@ module.exports = function(grunt) {
                                 },
                                 hostRewrite: proxyOption.hostRewrite,
                             })
-                            .on("error", function(err, req, res) {
+                            .on("error", function(err) {
                                 grunt.log.error("Proxy error: ", err.code);
                             }),
                         config: proxyOption,
                     });
                     grunt.log.writeln(
-                        "Proxy created for: " +
-                            proxyOption.context +
-                            " to " +
-                            proxyOption.host +
-                            ":" +
-                            proxyOption.port
+                        `Proxy created for: ${proxyOption.context} to ${
+                            proxyOption.host
+                        }:${proxyOption.port}`
                     );
                 }
             });

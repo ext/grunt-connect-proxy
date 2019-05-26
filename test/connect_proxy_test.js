@@ -1,7 +1,3 @@
-"use strict";
-
-var grunt = require("grunt");
-
 /*
   ======== A Handy Little Nodeunit Reference ========
   https://github.com/caolan/nodeunit
@@ -21,7 +17,7 @@ var grunt = require("grunt");
     test.doesNotThrow(block, [error], [message])
     test.ifError(value)
 */
-var utils = require("../lib/utils.js");
+const utils = require("../lib/utils.js");
 
 exports.connect_proxy = {
     setUp: function(done) {
@@ -30,7 +26,7 @@ exports.connect_proxy = {
     },
     default_options: function(test) {
         test.expect(8);
-        var proxies = utils.proxies();
+        const proxies = utils.proxies();
 
         test.equal(proxies.length, 6, "should return six valid proxies");
         test.notEqual(proxies[0].server, null, "server should be configured");
@@ -61,7 +57,7 @@ exports.connect_proxy = {
     },
     full_options: function(test) {
         test.expect(11);
-        var proxies = utils.proxies();
+        const proxies = utils.proxies();
 
         test.equal(proxies.length, 6, "should return five valid proxies");
         test.notEqual(proxies[1].server, null, "server should be configured");
@@ -116,7 +112,7 @@ exports.connect_proxy = {
 
     two_rewrites: function(test) {
         test.expect(2);
-        var config = utils.proxies()[2].config;
+        const config = utils.proxies()[2].config;
         test.equal(config.rules.length, 2, "rules array should have two items");
         test.deepEqual(
             config.rewrite,
@@ -129,7 +125,7 @@ exports.connect_proxy = {
 
     invalid_configs: function(test) {
         test.expect(5);
-        var proxies = utils.proxies();
+        const proxies = utils.proxies();
 
         test.equal(proxies.length, 6, "should not add the 2 invalid proxies");
         test.notEqual(
@@ -157,7 +153,7 @@ exports.connect_proxy = {
 
     invalid_rewrite: function(test) {
         test.expect(3);
-        var proxies = utils.proxies();
+        const proxies = utils.proxies();
         test.equal(proxies.length, 6, "proxies should still be valid");
         test.equal(
             proxies[3].config.rules.length,
@@ -176,7 +172,7 @@ exports.connect_proxy = {
     function_rewrite: function(test) {
         test.expect(1);
         console.log(utils.proxies());
-        var proxies = utils.proxies(),
+        const proxies = utils.proxies(),
             rules = proxies[5].config.rules[0];
         test.equal(
             "/rewrite".replace(rules.from, rules.to),

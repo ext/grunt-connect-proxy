@@ -1,7 +1,5 @@
-"use strict";
-
-var utils = require("../lib/utils.js");
-var http = require("http");
+const utils = require("../lib/utils.js");
+const http = require("http");
 
 exports.connect_proxy = {
     setUp: function(done) {
