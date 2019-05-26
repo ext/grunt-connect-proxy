@@ -39,6 +39,18 @@
       "git add"
     ]
   },
+  "renovate": {
+    "extends": [
+      "config:js-lib"
+    ],
+    "automerge": true,
+    "automergeType": "branch",
+    "prCreation": "not-pending",
+    "unpublishSafe": true,
+    "major": {
+      "automerge": false
+    }
+  },
   "dependencies": {
     "grunt": "1.0.1",
     "http-proxy": "1.15.2",
