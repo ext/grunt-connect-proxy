@@ -24,7 +24,20 @@
     "node": ">= 8.0.0"
   },
   "scripts": {
+    "prettier:check": "prettier '**/*.{ts,js,json,md,scss,vue}' --list-different",
+    "prettier:write": "prettier '**/*.{ts,js,json,md,scss,vue}' --write",
     "test": "grunt test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,json,md,scss}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "grunt": "1.0.1",
@@ -32,11 +45,14 @@
     "lodash": "4.16.4"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "1.0.0",
-    "grunt-contrib-clean": "1.0.0",
-    "grunt-contrib-nodeunit": "1.0.0",
     "grunt": "1.0.1",
-    "grunt-contrib-connect": "1.0.2"
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-connect": "1.0.2",
+    "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-nodeunit": "1.0.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1"
   },
   "peerDependencies": {
     "grunt": "^1.0.1"
