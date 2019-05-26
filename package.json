@@ -1,19 +1,22 @@
 {
-  "name": "grunt-connect-proxy2",
+  "name": "grunt-connect-proxy3",
   "description": "Provides a http proxy as middleware for grunt connect.",
   "version": "2.0.0",
-  "homepage": "https://github.com/bjornharrtell/grunt-connect-proxy2",
+  "homepage": "https://github.com/ext/grunt-connect-proxy",
   "author": {
     "name": "Drewz",
     "email": "drewz@2mod5.com"
   },
-  "contributors": ["Björn Harrtell <bjorn@wololo.org>"],
+  "contributors": [
+    "David Sveningsson <ext-github@sidvind.com>",
+    "Björn Harrtell <bjorn@wololo.org>"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/bjornharrtell/grunt-connect-proxy.git"
+    "url": "git://github.com/ext/grunt-connect-proxy.git"
   },
   "bugs": {
-    "url": "https://github.com/bjornharrtell/grunt-connect-proxy/issues"
+    "url": "https://github.com/ext/grunt-connect-proxy/issues"
   },
   "license": "MIT",
   "main": "Gruntfile.js",
