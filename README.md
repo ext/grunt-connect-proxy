@@ -21,13 +21,13 @@ This plugin requires Grunt `^1.0.0`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-connect-proxy2 --save-dev
+npm install grunt-connect-proxy3 --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks("grunt-connect-proxy2");
+grunt.loadNpmTasks("grunt-connect-proxy3");
 ```
 
 ## Adapting the "connect" task
@@ -80,7 +80,7 @@ Add the middleware call from the connect option middleware hook
                         }
 
                         // Setup the proxy
-                        var middlewares = [require('grunt-connect-proxy2/lib/utils').proxyRequest];
+                        var middlewares = [require('grunt-connect-proxy3/lib/utils').proxyRequest];
 
                         // Serve static files.
                         options.base.forEach(function(base) {
@@ -112,7 +112,7 @@ It is possible to add the proxy middleware without Livereload as follows:
           logger: 'dev',
           hostname: 'localhost',
           middleware: function (connect, options, defaultMiddleware) {
-             var proxy = require('grunt-connect-proxy2/lib/utils').proxyRequest;
+             var proxy = require('grunt-connect-proxy3/lib/utils').proxyRequest;
              return [
                 // Include the proxy first
                 proxy
@@ -324,3 +324,4 @@ grunt.registerTask("e2etest", function(target) {
 -   0.1.11 Fix Websocket support on Node 0.10 - Bumped http-proxy dependency to 1.1.4, Removed unsupported http-proxy options (rejectUnauthorized, timeout, changeOrigin)
 -   0.2.0 Added hidden headers support
 -   2.0.0 Forked from unreleased master, upgraded deps and released as 2.0.0.
+-   2.1.0 Forked again, some additional patches and updated deps.
