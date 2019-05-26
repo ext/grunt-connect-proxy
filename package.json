@@ -3,6 +3,13 @@
   "description": "Provides a http proxy as middleware for grunt connect.",
   "version": "2.1.0",
   "homepage": "https://github.com/ext/grunt-connect-proxy",
+  "keywords": [
+    "gruntplugin",
+    "proxy",
+    "connect",
+    "http",
+    "grunt"
+  ],
   "author": {
     "name": "Drewz",
     "email": "drewz@2mod5.com"
