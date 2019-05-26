@@ -6,22 +6,23 @@
  * Licensed under the MIT license.
  */
 
-"use strict";
+const isCI = require("is-ci");
 
 module.exports = function(grunt) {
-    var proxySnippet = require("./lib/utils.js").proxyRequest;
-
     // Project configuration.
     grunt.initConfig({
-        jshint: {
-            all: [
-                "Gruntfile.js",
-                "tasks/*.js",
-                "lib/*.js",
-                "<%= nodeunit.tests %>",
-            ],
-            options: {
-                jshintrc: ".jshintrc",
+        eslint: {
+            default: {
+                options: {
+                    /* CI pipeline sets stricter environment to disallow any warnings */
+                    maxWarnings: isCI ? 0 : -1,
+                },
+                src: [
+                    "Gruntfile.js",
+                    "tasks/*.js",
+                    "lib/*.js",
+                    "<%= nodeunit.tests %>",
+                ],
             },
         },
 
@@ -113,7 +114,7 @@ module.exports = function(grunt) {
             },
             request: {
                 options: {
-                    middleware: function(connect, options) {
+                    middleware: function() {
                         return [require("./lib/utils").proxyRequest];
                     },
                 },
@@ -152,9 +153,9 @@ module.exports = function(grunt) {
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks("grunt-contrib-connect");
-    grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-nodeunit");
+    grunt.loadNpmTasks("grunt-eslint");
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
