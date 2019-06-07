@@ -82,7 +82,7 @@
     "grunt-eslint": "21.0.0",
     "husky": "2.4.0",
     "is-ci": "2.0.0",
-    "lint-staged": "8.1.7",
+    "lint-staged": "8.2.0",
     "prettier": "1.17.1"
   }
 }
