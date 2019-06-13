@@ -79,7 +79,7 @@
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-connect": "2.0.0",
     "grunt-contrib-nodeunit": "2.0.0",
-    "grunt-eslint": "21.0.0",
+    "grunt-eslint": "21.1.0",
     "husky": "2.4.1",
     "is-ci": "2.0.0",
     "lint-staged": "8.2.0",
