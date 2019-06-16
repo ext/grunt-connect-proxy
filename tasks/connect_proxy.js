@@ -29,9 +29,7 @@ module.exports = function(grunt) {
                 }
                 if (proxyOption.https && proxyOption.port === 80) {
                     grunt.log.warn(
-                        `Proxy for ${
-                            proxyOption.context
-                        } is using https on port 80. Are you sure this is correct?`
+                        `Proxy for ${proxyOption.context} is using https on port 80. Are you sure this is correct?`
                     );
                 }
                 return true;
@@ -91,9 +89,7 @@ module.exports = function(grunt) {
                         config: proxyOption,
                     });
                     grunt.log.writeln(
-                        `Proxy created for: ${proxyOption.context} to ${
-                            proxyOption.host
-                        }:${proxyOption.port}`
+                        `Proxy created for: ${proxyOption.context} to ${proxyOption.host}:${proxyOption.port}`
                     );
                 }
             });
