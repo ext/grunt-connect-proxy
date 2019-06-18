@@ -2,6 +2,8 @@
 
 ## Upcoming release
 
+## 2.1.1 (2019-06-18)
+
 -   Pass `changeOrigin` option to `http-proxy`.
 
 ## 2.1.0 (2019-05-26)
