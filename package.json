@@ -35,6 +35,7 @@
     "node": ">=8"
   },
   "scripts": {
+    "postversion": "git push --follow-tags",
     "prettier:check": "prettier '**/*.{ts,js,json,md,scss,vue}' --list-different",
     "prettier:write": "prettier '**/*.{ts,js,json,md,scss,vue}' --write",
     "test": "grunt eslint test",
