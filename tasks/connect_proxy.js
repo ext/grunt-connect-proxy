@@ -78,6 +78,7 @@ module.exports = function(grunt) {
                                 target: utils.getTargetUrl(proxyOption),
                                 secure: proxyOption.secure,
                                 xfwd: proxyOption.xforward,
+                                changeOrigin: proxyOption.changeOrigin,
                                 headers: {
                                     host: proxyOption.host,
                                 },
