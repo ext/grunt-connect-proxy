@@ -81,7 +81,7 @@
     "grunt-contrib-connect": "2.0.0",
     "grunt-contrib-nodeunit": "2.0.0",
     "grunt-eslint": "21.1.0",
-    "husky": "2.5.0",
+    "husky": "2.6.0",
     "is-ci": "2.0.0",
     "lint-staged": "8.2.1",
     "prettier": "1.18.2"
