@@ -35,10 +35,11 @@
     "node": ">=8"
   },
   "scripts": {
+    "eslint": "eslint **/*.js",
     "postversion": "git push --follow-tags",
     "prettier:check": "prettier '**/*.{ts,js,json,md,scss,vue}' --list-different",
     "prettier:write": "prettier '**/*.{ts,js,json,md,scss,vue}' --write",
-    "test": "grunt eslint test",
+    "test": "grunt test",
     "version": "sv-update-changelog -i && git add CHANGELOG.md"
   },
   "husky": {
@@ -80,9 +81,7 @@
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-connect": "2.0.0",
     "grunt-contrib-nodeunit": "2.0.0",
-    "grunt-eslint": "21.1.0",
     "husky": "2.7.0",
-    "is-ci": "2.0.0",
     "lint-staged": "8.2.1",
     "prettier": "1.18.2"
   }
