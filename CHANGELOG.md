@@ -2,7 +2,11 @@
 
 ## Upcoming release
 
+-   Drop `grunt-eslint` dependency.
+
 ## 2.2.0 (2019-06-26)
+
+-   Bumped dependencies
 
 ## 2.1.1 (2019-06-18)
 

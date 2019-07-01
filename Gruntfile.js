@@ -6,26 +6,9 @@
  * Licensed under the MIT license.
  */
 
-const isCI = require("is-ci");
-
 module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
-        eslint: {
-            default: {
-                options: {
-                    /* CI pipeline sets stricter environment to disallow any warnings */
-                    maxWarnings: isCI ? 0 : -1,
-                },
-                src: [
-                    "Gruntfile.js",
-                    "tasks/*.js",
-                    "lib/*.js",
-                    "<%= nodeunit.tests %>",
-                ],
-            },
-        },
-
         // Before generating any new files, remove any previously-created files.
         clean: {
             tests: ["tmp"],
@@ -155,7 +138,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-connect");
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-nodeunit");
-    grunt.loadNpmTasks("grunt-eslint");
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
