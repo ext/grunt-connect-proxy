@@ -17,7 +17,6 @@
     test.doesNotThrow(block, [error], [message])
     test.ifError(value)
 */
-const utils = require("../lib/utils.js");
 const http = require("http");
 
 exports.connect_proxy = {

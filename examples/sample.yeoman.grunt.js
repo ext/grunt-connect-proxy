@@ -1,10 +1,10 @@
 // Generated on 2013-02-28 using generator-webapp 0.1.5
-"use strict";
-var lrSnippet = require("grunt-contrib-livereload/lib/utils").livereloadSnippet;
-var mountFolder = function(connect, dir) {
+const lrSnippet = require("grunt-contrib-livereload/lib/utils")
+    .livereloadSnippet;
+const mountFolder = function(connect, dir) {
     return connect.static(require("path").resolve(dir));
 };
-var proxySnippet = require("grunt-connect-proxy/lib/utils").proxyRequest;
+const proxySnippet = require("grunt-connect-proxy/lib/utils").proxyRequest;
 
 // # Globbing
 // for performance reasons we're only matching one level down:
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         .forEach(grunt.loadNpmTasks);
 
     // configurable paths
-    var yeomanConfig = {
+    const yeomanConfig = {
         app: "app",
         dist: "dist",
     };
@@ -143,8 +143,6 @@ module.exports = function(grunt) {
                     // `name` and `out` is set by grunt-usemin
                     baseUrl: "app/scripts",
                     optimize: "none",
-                    // TODO: Figure out how to make sourcemaps work with grunt-usemin
-                    // https://github.com/yeoman/grunt-usemin/issues/30
                     //generateSourceMaps: true,
                     // required to support SourceMaps
                     // http://requirejs.org/docs/errors.html#sourcemapcomments
@@ -240,7 +238,7 @@ module.exports = function(grunt) {
             return grunt.task.run(["build", "open", "connect:dist:keepalive"]);
         }
 
-        grunt.task.run([
+        return grunt.task.run([
             "clean:server",
             "compass:server",
             "configureProxies",

@@ -1,4 +1,3 @@
-const utils = require("../lib/utils.js");
 const http = require("http");
 
 exports.connect_proxy = {
