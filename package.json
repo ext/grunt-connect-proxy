@@ -82,7 +82,7 @@
     "grunt-contrib-connect": "2.1.0",
     "grunt-contrib-nodeunit": "2.0.0",
     "husky": "3.0.5",
-    "lint-staged": "9.3.0",
+    "lint-staged": "9.4.0",
     "prettier": "1.18.2"
   }
 }
