@@ -20,11 +20,11 @@
 const utils = require("../lib/utils.js");
 
 exports.connect_proxy = {
-    setUp: function(done) {
+    setUp: function (done) {
         // setup here if necessary
         done();
     },
-    default_options: function(test) {
+    default_options: function (test) {
         test.expect(8);
         const proxies = utils.proxies();
 
@@ -55,7 +55,7 @@ exports.connect_proxy = {
 
         test.done();
     },
-    full_options: function(test) {
+    full_options: function (test) {
         test.expect(11);
         const proxies = utils.proxies();
 
@@ -110,7 +110,7 @@ exports.connect_proxy = {
         test.done();
     },
 
-    two_rewrites: function(test) {
+    two_rewrites: function (test) {
         test.expect(2);
         const config = utils.proxies()[2].config;
         test.equal(config.rules.length, 2, "rules array should have two items");
@@ -123,7 +123,7 @@ exports.connect_proxy = {
         test.done();
     },
 
-    invalid_configs: function(test) {
+    invalid_configs: function (test) {
         test.expect(5);
         const proxies = utils.proxies();
 
@@ -151,7 +151,7 @@ exports.connect_proxy = {
         test.done();
     },
 
-    invalid_rewrite: function(test) {
+    invalid_rewrite: function (test) {
         test.expect(3);
         const proxies = utils.proxies();
         test.equal(proxies.length, 6, "proxies should still be valid");
@@ -169,7 +169,7 @@ exports.connect_proxy = {
         test.done();
     },
 
-    function_rewrite: function(test) {
+    function_rewrite: function (test) {
         test.expect(1);
         console.log(utils.proxies());
         const proxies = utils.proxies(),

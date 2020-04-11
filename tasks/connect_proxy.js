@@ -8,16 +8,16 @@
 
 const utils = require("../lib/utils");
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     grunt.registerTask(
         "configureProxies",
         "Configure any specified connect proxies.",
-        function(config) {
+        function (config) {
             // setup proxy
             const httpProxy = require("http-proxy");
             let proxyOption;
             let proxyOptions = [];
-            const validateProxyConfig = function(proxyOption) {
+            const validateProxyConfig = function (proxyOption) {
                 if (
                     proxyOption.host === undefined ||
                     proxyOption.context === undefined
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
                     grunt.config("connect.proxies") || []
                 );
             }
-            proxyOptions.forEach(function(proxy) {
+            proxyOptions.forEach(function (proxy) {
                 proxyOption = Object.assign(
                     {
                         port: proxy.https ? 443 : 80,
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                         secure: true,
                         xforward: false,
                         rules: [],
-                        errorHandler: function() {},
+                        errorHandler: function () {},
                         ws: false,
                     },
                     proxy
@@ -84,7 +84,7 @@ module.exports = function(grunt) {
                                 },
                                 hostRewrite: proxyOption.hostRewrite,
                             })
-                            .on("error", function(err) {
+                            .on("error", function (err) {
                                 grunt.log.error("Proxy error: ", err.code);
                             }),
                         config: proxyOption,

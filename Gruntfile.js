@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  */
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         // Before generating any new files, remove any previously-created files.
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
                     context: "/rewrite",
                     host: "www.yetanothercontext.com",
                     rewrite: {
-                        "^(/)rewrite": function(match, p1) {
+                        "^(/)rewrite": function (match, p1) {
                             return p1;
                         },
                     },
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
             },
             request: {
                 options: {
-                    middleware: function() {
+                    middleware: function () {
                         return [require("./lib/utils").proxyRequest];
                     },
                 },
