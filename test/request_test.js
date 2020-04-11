@@ -20,13 +20,13 @@
 const http = require("http");
 
 exports.connect_proxy = {
-    setUp: function(done) {
+    setUp: function (done) {
         // setup here if necessary
         done();
     },
-    proxied_request: function(test) {
+    proxied_request: function (test) {
         test.expect(2);
-        http.createServer(function(req, res) {
+        http.createServer(function (req, res) {
             test.equal(
                 req.headers["x-proxied-header"],
                 "added",
@@ -43,12 +43,12 @@ exports.connect_proxy = {
                 path: "/request",
                 port: 9000,
             },
-            function(response) {
+            function (response) {
                 let data = "";
-                response.on("data", function(chunk) {
+                response.on("data", function (chunk) {
                     data += chunk;
                 });
-                response.on("end", function() {
+                response.on("end", function () {
                     test.equal(
                         data,
                         "request successfully proxied!",

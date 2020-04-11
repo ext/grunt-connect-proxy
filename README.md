@@ -129,7 +129,7 @@ It is possible to add the proxy middleware without Livereload as follows:
 For the server task, add the configureProxies task before the connect task
 
 ```js
-grunt.registerTask("server", function(target) {
+grunt.registerTask("server", function (target) {
     grunt.task.run([
         "clean:server",
         "compass:server",
@@ -217,7 +217,7 @@ proxies: [
         rewrite: {
             "^/removingcontext": "",
             "^/changingcontext": "/anothercontext",
-            "^/updating(context)": function(match, p1) {
+            "^/updating(context)": function (match, p1) {
                 return "/new" + p1;
             },
         },
@@ -304,7 +304,7 @@ grunt.initConfig({
     },
 });
 
-grunt.registerTask("e2etest", function(target) {
+grunt.registerTask("e2etest", function (target) {
     grunt.task.run(["configureProxies:server2", "open", "karma"]);
 });
 ```

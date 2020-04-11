@@ -1,11 +1,11 @@
 const utils = require("../lib/utils.js");
 
 exports.utils_test = {
-    setUp: function(done) {
+    setUp: function (done) {
         // setup here if necessary
         done();
     },
-    match_context_test: function(test) {
+    match_context_test: function (test) {
         let singleContext, arrayContext, url, match;
         test.expect(6);
 
@@ -65,7 +65,7 @@ exports.utils_test = {
         test.done();
     },
 
-    get_target_url_test: function(test) {
+    get_target_url_test: function (test) {
         const proxyOptions = {
             host: "foo.com",
             https: true,

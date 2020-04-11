@@ -1,11 +1,11 @@
 const utils = require("../lib/utils.js");
 
 exports.server3_proxy_test = {
-    setUp: function(done) {
+    setUp: function (done) {
         // setup here if necessary
         done();
     },
-    proxy_options_test: function(test) {
+    proxy_options_test: function (test) {
         test.expect(8);
         const proxies = utils.proxies();
 

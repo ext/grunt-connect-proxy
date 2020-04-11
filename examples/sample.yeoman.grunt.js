@@ -1,7 +1,7 @@
 // Generated on 2013-02-28 using generator-webapp 0.1.5
 const lrSnippet = require("grunt-contrib-livereload/lib/utils")
     .livereloadSnippet;
-const mountFolder = function(connect, dir) {
+const mountFolder = function (connect, dir) {
     return connect.static(require("path").resolve(dir));
 };
 const proxySnippet = require("grunt-connect-proxy/lib/utils").proxyRequest;
@@ -12,11 +12,9 @@ const proxySnippet = require("grunt-connect-proxy/lib/utils").proxyRequest;
 // use this if you want to match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     // load all grunt tasks
-    require("matchdep")
-        .filterDev("grunt-*")
-        .forEach(grunt.loadNpmTasks);
+    require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
     // configurable paths
     const yeomanConfig = {
@@ -56,7 +54,7 @@ module.exports = function(grunt) {
             ],
             livereload: {
                 options: {
-                    middleware: function(connect) {
+                    middleware: function (connect) {
                         return [
                             proxySnippet,
                             lrSnippet,
@@ -68,7 +66,7 @@ module.exports = function(grunt) {
             },
             test: {
                 options: {
-                    middleware: function(connect) {
+                    middleware: function (connect) {
                         return [
                             mountFolder(connect, ".tmp"),
                             mountFolder(connect, "test"),
@@ -78,7 +76,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 options: {
-                    middleware: function(connect) {
+                    middleware: function (connect) {
                         return [mountFolder(connect, "dist")];
                     },
                 },
@@ -233,7 +231,7 @@ module.exports = function(grunt) {
 
     grunt.renameTask("regarde", "watch");
 
-    grunt.registerTask("server", function(target) {
+    grunt.registerTask("server", function (target) {
         if (target === "dist") {
             return grunt.task.run(["build", "open", "connect:dist:keepalive"]);
         }
