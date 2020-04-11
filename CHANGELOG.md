@@ -2,6 +2,8 @@
 
 ## Upcoming release
 
+-   BREAKING CHANGE: drop node 8 support
+-   Update dependencies
 -   Drop `grunt-eslint` dependency.
 
 ## 2.2.0 (2019-06-26)
