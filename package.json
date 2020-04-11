@@ -32,7 +32,7 @@
   "license": "MIT",
   "main": "tasks/connect_proxy.js",
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "scripts": {
     "eslint": "eslint **/*.js",
