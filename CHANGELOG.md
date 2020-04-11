@@ -2,6 +2,8 @@
 
 ## Upcoming release
 
+## 3.0.0 (2020-04-11)
+
 -   BREAKING CHANGE: drop node 8 support
 -   Update dependencies
 -   Drop `grunt-eslint` dependency.
