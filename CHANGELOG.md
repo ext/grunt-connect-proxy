@@ -6,8 +6,6 @@
 
 -   **deps:** update dependency http-proxy to v1.18.1 ([7b43bb5](https://github.com/ext/grunt-connect-proxy/commit/7b43bb5d7f743300e99c84c38a6ec5bf2ddba664))
 
-# `grunt-connect-proxy3` changelog
-
 ## 3.0.0 (2020-04-11)
 
 -   BREAKING CHANGE: drop node 8 support
