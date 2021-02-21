@@ -37,15 +37,11 @@
   "scripts": {
     "eslint": "eslint **/*.js",
     "postversion": "git push --follow-tags",
+    "prepare": "husky install",
     "prettier:check": "prettier . --check",
     "prettier:write": "prettier . --write",
     "test": "grunt test",
     "version": "sv-update-changelog -i && git add CHANGELOG.md"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{ts,js,json,md,scss}": "prettier --write"
@@ -78,7 +74,7 @@
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-connect": "3.0.0",
     "grunt-contrib-nodeunit": "2.1.0",
-    "husky": "4.3.8",
+    "husky": "5.1.0",
     "lint-staged": "10.5.4",
     "prettier": "2.2.1"
   }
