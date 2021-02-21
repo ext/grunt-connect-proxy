@@ -1,8 +1,23 @@
 {
   "name": "grunt-connect-proxy3",
-  "description": "Provides a http proxy as middleware for grunt connect.",
   "version": "3.0.0",
+  "description": "Provides a http proxy as middleware for grunt connect.",
+  "keywords": [
+    "gruntplugin",
+    "proxy",
+    "connect",
+    "http",
+    "grunt"
+  ],
   "homepage": "https://github.com/ext/grunt-connect-proxy",
+  "bugs": {
+    "url": "https://github.com/ext/grunt-connect-proxy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ext/grunt-connect-proxy.git"
+  },
+  "license": "MIT",
   "author": {
     "name": "Drewz",
     "email": "drewz@2mod5.com"
@@ -11,55 +26,22 @@
     "David Sveningsson <ext-github@sidvind.com>",
     "Björn Harrtell <bjorn@wololo.org>"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ext/grunt-connect-proxy.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ext/grunt-connect-proxy/issues"
-  },
-  "keywords": [
-    "gruntplugin",
-    "proxy",
-    "connect",
-    "http",
-    "grunt"
-  ],
+  "main": "tasks/connect_proxy.js",
   "files": [
     "lib",
     "tasks"
   ],
-  "license": "MIT",
-  "main": "tasks/connect_proxy.js",
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
     "eslint": "eslint **/*.js",
-    "postversion": "git push --follow-tags",
     "prepare": "husky install",
     "prettier:check": "prettier . --check",
     "prettier:write": "prettier . --write",
     "test": "grunt test",
-    "version": "sv-update-changelog -i && git add CHANGELOG.md"
+    "version": "sv-update-changelog -i && git add CHANGELOG.md",
+    "postversion": "git push --follow-tags"
   },
   "lint-staged": {
     "*.{ts,js,json,md,scss}": "prettier --write"
-  },
-  "renovate": {
-    "extends": [
-      "config:js-lib"
-    ],
-    "automerge": true,
-    "automergeType": "branch",
-    "prCreation": "not-pending",
-    "unpublishSafe": true,
-    "major": {
-      "automerge": false
-    }
-  },
-  "peerDependencies": {
-    "grunt": "^1.0.1"
   },
   "dependencies": {
     "http-proxy": "1.18.1"
@@ -77,5 +59,23 @@
     "husky": "5.1.0",
     "lint-staged": "10.5.4",
     "prettier": "2.2.1"
+  },
+  "peerDependencies": {
+    "grunt": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "renovate": {
+    "extends": [
+      "config:js-lib"
+    ],
+    "automerge": true,
+    "automergeType": "branch",
+    "prCreation": "not-pending",
+    "unpublishSafe": true,
+    "major": {
+      "automerge": false
+    }
   }
 }
