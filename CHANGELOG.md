@@ -1,5 +1,15 @@
 # grunt-connect-proxy3 changelog
 
+## [4.0.0](https://github.com/ext/grunt-connect-proxy/compare/v3.0.1...v4.0.0) (2021-06-06)
+
+### ⚠ BREAKING CHANGES
+
+-   minimum required NodeJS version is 12
+
+### Features
+
+-   minimum required NodeJS version is 12 ([2711d71](https://github.com/ext/grunt-connect-proxy/commit/2711d71aa7c6494a14971d56805d1947a2574b41))
+
 ### [3.0.1](https://github.com/ext/grunt-connect-proxy/compare/v3.0.0...v3.0.1) (2021-02-21)
 
 ### Dependency upgrades
