@@ -54,7 +54,7 @@
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-connect": "3.0.0",
     "grunt-contrib-nodeunit": "3.0.0",
-    "husky": "7.0.2",
+    "husky": "7.0.4",
     "lint-staged": "11.2.6",
     "prettier": "2.4.1",
     "semantic-release": "18.0.0"
