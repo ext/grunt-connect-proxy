@@ -14,6 +14,8 @@ This is a fork of the unmaintained
 [grunt-connect-proxy](https://github.com/drewzboto/grunt-connect-proxy) package
 and includes community made patches.
 
+As of 2022-02-20 this fork will be unmaintained as well.
+
 ## Getting Started
 
 This plugin requires Grunt `^1.0.0`
